@@ -3,7 +3,7 @@
 namespace koralop\bettermod\session;
 
 use pocketmine\plugin\PluginBase;
-
+use pocketmine\player\Player;
 /**
  * @class SessionFactory
  * @package koralop\bettermod\session
@@ -25,7 +25,7 @@ class SessionFactory
    * @param void
    * @class Player $player
    */
-  public static function get(Player $player) : void {
+  public static function get(Player $player) : ?Session {
     return self::$sessions[$player->getName()] ?? null;
   }
   

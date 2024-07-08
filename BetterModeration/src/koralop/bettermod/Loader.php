@@ -6,6 +6,7 @@ use koralop\bettermod\listener\SessionListener;
 
 use pocketmine\plugin\PluginBase;
 use pocketmine\utils\SingletonTrait;
+use muqsit\invmenu\InvMenuHandler;
 /**
  * @Class Loader
  * @package koralop\bettermod
@@ -16,6 +17,9 @@ class Loader extends PluginBase
   use SingletonTrait;
   protected function onLoad() : void {
     self::setInstance($this);
+    if(!InvMenuHandler::isRegistered()){
+    	InvMenuHandler::register($this);
+    }
   }
   
   protected function onEnable() : void {

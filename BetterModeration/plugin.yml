@@ -4,3 +4,7 @@ version: 0.1-BETA
 main: koralop\bettermod\Loader
 author: 'koralop'
 website: 'https://github.com/koraloop'
+
+permissions:
+  bettermod.vanish.view:
+    default: op
